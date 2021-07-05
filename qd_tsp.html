@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>QD-TSP</title>
+  </head>
+
+  <body style="background:#BBBBBB; color:black; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none" oncontextmenu="return false;">
+    <center>
+      <div style="display:table">
+	<div style="display:table-row">
+
+    <!--start of content that needs to be collapsable-->
+    <div id="grid-and-instructions">
+	    <div style="display:table-cell">
+	      <div style="position:relative; width:200px; height:200px">
+	        <canvas id="behaviorcanvas" width="200px" height="200px">
+		        Browser does not support canvas.
+	        </canvas>
+	      </div>
+	      <div style="width:200px; height:50px; text-align:left">
+	        &uarr; Length of longest leg<br/>
+	        &rarr; Length of shortest leg
+	      </div>
+	      <div>
+	        Click a cell to copy its elite.<br/>
+	        Click and drag to another cell to crossover their elites.<br/>
+	      </div>
+	    </div>
+      <!--end of content that needs to be collapsable???-->
+    </div>
+
+	  <button style="width:100px; height:30px" onclick="toggleGridVisibility();">
+      Toggle grid
+    </button>
+
+	  <div style="display:table-cell">
+	    <div style="width:200px; height:200px">
+	    </div>
+	  </div>
+
+	  <div style="display:table-cell">
+	    <div style="position:relative; width:500px; height:500px">
+	      <canvas id="problemcanvas" width="500px" height="500px" style="position:absolute; left:0px; top:0px">
+		Browser does not support canvas.
+	      </canvas>
+	    </div>
+	    <div id="problemmessage" style="width:500px; height:40px; text-align:right">
+	    </div>
+	    <div style="width:500px; height:50px; text-align:left">
+	      Click and drag between multiple points to creat a new sub-path.<br/>
+	    </div>
+	    <div style="width:500px; height:30px; text-align:left">
+	      <button style="width:100px; height:30px" onclick="startStopSolver();" id="startstopsolver">Start</button>
+	      <button style="width:100px; height:30px" onclick="randomSolution();">Randomize</button>
+	      <button style="width:100px; height:30px" onclick="mutateSolution();">Mutate</button>
+	    </div>
+	  </div>
+	</div>
+      </div>
+
+    </center>
+    <script src="qd_tsp.js"></script>
+  </body>
+
+</html>
